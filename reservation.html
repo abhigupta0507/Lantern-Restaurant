@@ -12,9 +12,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css-files/backgroundmenu.css">
     <link rel="stylesheet" href="css-files/menu.css">
-    <link rel="stylesheet" href="css-files/specialities.css">
     <link rel="stylesheet" href="css-files/background-contact.css">
     <link rel="icon" type="image/x-icon" href="image-files/favicon-lantern.png">
+    <link rel="stylesheet" href="css-files/reservation.css">
+    <title>Lantern Restaurant</title>
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
@@ -30,29 +31,28 @@
     <script type="text/javascript">
       window.onload = function () {
         document
-          .getElementById("contact-form")
+          .getElementById("reserve-form")
           .addEventListener("submit", function (event) {
             event.preventDefault();
             // these IDs from the previous steps
-            emailjs.sendForm("service_yrvt4re", "template_canjdlq", this).then(
+            emailjs.sendForm("service_yrvt4re", "template_ugu7e5d", this).then(
               () => {
-                alert('Message Sent!!');
+                alert('Table Booked!!');
               },
               (error) => {
-                alert('Failed to send message due to',error);
+                alert('Failed to Book due to',error);
               }
             );
           });
       };
     </script>
-    <title>Lantern Restaurant</title>
 </head>
 <body>
     <div class="slider">
         <div class="slide"></div>
     <div>
-        <div class="text-above-background-top" style="font-family: Indie Flower, cursive; left:38%;">
-            Contact Us 
+        <div class="text-above-background-top" style="font-family: Indie Flower, cursive;left:30%;">
+            Make a Reservation
         </div>
     <header id="main-header">
         <nav><div class="name-header-button"><button class="name-header">Lantern</button></div>
@@ -60,9 +60,9 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="menu.html" >Menu</a></li>
                 <li><a href="specialities.html">Specialities</a></li>
-                <li><a href="reservation.html">Reservation</a></li>
+                <li><a href="reservation.html" style="color:orange;">Reservation</a></li>
                 <li><a href="#blog">Blog</a></li>
-                <li><a href="contact.html" style="color:orange;">Contact Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
                 <!-- Add more menu items as needed -->
             </ul>
         </nav>
@@ -70,33 +70,45 @@
     
     <main>
         <section class="about-restaurant-home ">
-            <iframe class="map-contactus" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1477.8601376658744!2d82.98476538448593!3d25.263117738516314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e3392e4725649%3A0x2c7d4cf06e09c1a2!2sAryabhatta%20Hostel%2C%20IIT%20BHU!5e0!3m2!1sen!2sin!4v1712953037312!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <div class="send-message">
-                <div class="initial-message">
-                    Send us a message!!
+            <section class="restaurant-photo-reservation-container">
+                <img class="restaurant-photo-reservation" src="css-files/bg-image1.jpg">
+            </section>            
+            <form id="reserve-form">
+
+                <div class="row">
+                   
+                  <div class="name-form col-md-6 form-group">
+                    <input type="text" id="name-contact" name="name" class="form-control" placeholder="Your Name" required>
+                  </div>
+                 
+                  <div class="col-md-6 form-group">
+                    <input type="email" id="email-contact" name="email" class="form-control" placeholder="Your Email" required>
+                  </div>
                 </div>
-                <form id="contact-form">
-                    <div class="row">
-                      <div class="name-form col-md-6 form-group">
-                        <input type="text" id="name-contact" name="name" class="form-control" placeholder="Your Name" required>
-                      </div>
-                      <div class="col-md-6 form-group">
-                        <input type="email" id="email-contact" name="email" class="form-control" placeholder="Your Email" required>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <input type="number" id="mobile-contact" name="mobile" class="form-control" placeholder="Mobile Number" required>
-                    </div>
-                    <div class="form-group">
-                      <textarea name="message" id="message-contact" class="form-control" placeholder="Message" required></textarea>
-                    </div>
-                    <div class="form-group">
-                      <input type="submit" onclick="sendEmail()" value="Send"class="send-button-form btn btn-primary py-3 px-5">
-                    </div>
-
-                  </form>
-            </div>
-
+                
+                <div class="form-group">
+                  <input type="number" id="mobile-contact" name="mobile" class="form-control no-spinners" placeholder="Mobile Number" required>
+                </div>
+                
+                <div class="form-group">
+                    <input type="date" id="date-contact" name="date" class="form-control" placeholder="Enter the date" required>
+                  </div>
+                <div class="form-group">
+                    <select name="personcount" id="personcount-reserve" class="form-control" aria-placeholder="Select the number of persons" required>
+                      <option value="Number Of Persons">Number Of Persons</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4+</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <input type="submit" onclick="sendEmail()" value="Book a seat"class="send-button-form btn btn-primary py-3 px-5">
+                  </div>
+                </div>
+                
+                
+              </form>
         </section>
 
 
