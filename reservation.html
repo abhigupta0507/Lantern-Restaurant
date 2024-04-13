@@ -3,50 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css-files/header.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css-files/header.css">
     <link rel="stylesheet" href="css-files/backgroundmenu.css">
     <link rel="stylesheet" href="css-files/menu.css">
     <link rel="stylesheet" href="css-files/background-contact.css">
     <link rel="icon" type="image/x-icon" href="image-files/favicon-lantern.png">
     <link rel="stylesheet" href="css-files/reservation.css">
+    <link rel="stylesheet" href="css-files/footer.css">
     <title>Lantern Restaurant</title>
-
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-    ></script>
-    <script type="text/javascript">
-      (function () {
-        // https://dashboard.emailjs.com/admin/account
-        emailjs.init({
-          publicKey: "6H4nqXZg_4aAguaw8",
-        });
-      })();
-    </script>
-    <script type="text/javascript">
-      window.onload = function () {
-        document
-          .getElementById("reserve-form")
-          .addEventListener("submit", function (event) {
-            event.preventDefault();
-            // these IDs from the previous steps
-            emailjs.sendForm("service_yrvt4re", "template_ugu7e5d", this).then(
-              () => {
-                alert('Table Booked!!');
-              },
-              (error) => {
-                alert('Failed to Book due to',error);
-              }
-            );
-          });
-      };
-    </script>
 </head>
 <body>
     <div class="slider">
@@ -73,50 +45,46 @@
     </header>
     
     <main>
-        <section class="primary-container">
-            <section class="restaurant-photo-reservation-container">
-                <img class="restaurant-photo-reservation" src="image-files/reserved-table.jpg">
-            </section>            
-            <form id="reserve-form">
+          <section class="primary-container">
+              <section class="restaurant-photo-reservation-container">
+                  <img class="restaurant-photo-reservation" src="image-files/reserved-table.jpg">
+              </section>            
+              <form id="reserve-form">
+                  <div class="row">
 
-                <div class="row">
-                   
-                  <div class="name-form col-md-6 form-group">
-                    <input type="text" id="name-contact" name="name" class="form-control" placeholder="Your Name" required>
+                    <div class="name-form form-group">
+                      <input type="text" id="name-contact" name="name" class="form-control" placeholder="Your Name" required>
+                    </div>
+                  
+                    <div class="form-group">
+                      <input type="email" id="email-contact" name="email" class="form-control" placeholder="Your Email" required>
+                    </div>
                   </div>
-                 
-                  <div class="col-md-6 form-group">
-                    <input type="email" id="email-contact" name="email" class="form-control" placeholder="Your Email" required>
+
+                  <div class="form-group">
+                    <input type="number" id="mobile-contact" name="mobile" class="form-control no-spinners" placeholder="Mobile Number" required>
                   </div>
-                </div>
                 
-                <div class="form-group">
-                  <input type="number" id="mobile-contact" name="mobile" class="form-control no-spinners" placeholder="Mobile Number" required>
-                </div>
-                
-                <div class="form-group">
-                    <input type="date" id="date-contact" name="date" class="form-control" placeholder="Enter the date" required>
+                  <div class="form-group">
+                    <input type="date" id="date-contact" name="date" class="form-control"required>
                   </div>
-                <div class="form-group">
-                    <select name="personcount" id="personcount-reserve" class="form-control" aria-placeholder="Select the number of persons" required>
-                      <option value="Number Of Persons">Number Of Persons</option>
+
+                  <div class="form-group">
+                    <select name="personcount" id="personcount-reserve" class="form-control" required>
+                      <option value="Number-Of-Persons">Number Of Persons</option>
                       <option value="1">1</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
                       <option value="4">4+</option>
                     </select>
                   </div>
+
                   <div class="form-group">
-                    <input type="submit" onclick="sendEmail()" value="Book a seat"class="send-button-form btn btn-primary py-3 px-5">
+                    <input type="submit" value="Book a seat"class="send-button-form btn btn-primary py-3 px-5">
                   </div>
                 </div>
-                
-                
               </form>
         </section>
-
-
-
     </main>
     
     <footer>
@@ -171,6 +139,16 @@
         </div>
     </footer>
     <div class="copyright-footer">Copyright ©2024 All rights reserved</div>
-    <script src="specialities.js"></script>
-</body>
+    <script src="scripts/specialities.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function () {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init({
+          publicKey: "6H4nqXZg_4aAguaw8",
+        });
+      })();
+    </script>
+    <script src="scripts/book.js"></script>
+  </body>
 </html>

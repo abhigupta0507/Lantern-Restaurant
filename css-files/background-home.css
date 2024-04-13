@@ -15,31 +15,30 @@
     background-size: cover;
     background-position: center;
     animation: slide 10s infinite;
-    background-image: url('bg-image1.jpg');
   } 
   
   .slider .slide:nth-child(1) {
-    background-image: url('bg-image1.jpg');
+    background-image: url('slider-images/bg-image1.jpg');
     animation-delay: -0;
   }
   
   .slider .slide:nth-child(2) {
-    background-image: url('bg-image2.jpg');
+    background-image: url('slider-images/bg-image2.jpg');
     animation-delay: -2s;
   }
     
   .slider .slide:nth-child(3) {
-    background-image: url('bg-image3.jpg');
+    background-image: url('slider-images/bg-image3.jpg');
     animation-delay: -4s;
   }
     
   .slider .slide:nth-child(4) {
-    background-image: url('bg-image4.jpg');
+    background-image: url('slider-images/bg-image4.jpg');
     animation-delay: -6s;
   }
   
   .slider .slide:nth-child(5) {
-    background-image: url('bg-image5.jpg');
+    background-image: url('slider-images/bg-image4.jpg');
     animation-delay: -8s;
   }
 

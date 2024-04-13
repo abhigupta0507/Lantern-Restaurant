@@ -1,5 +1,4 @@
 .slider {
-    /* overflow: hidden; */
     width: 100vw;
     height: 500px;
     position: relative;
@@ -18,7 +17,7 @@
   
 
 .slider .slide:nth-child(1) {
-    background-image: url('bg-image1.jpg');
+    background-image: url('slider-images/bg-image1.jpg');
 }
 
 .map-contactus{

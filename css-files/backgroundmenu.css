@@ -4,7 +4,6 @@
     width: 100vw;
     height: 500px;
     position: relative;
-    background-image: url('bg-image5.jpg');
   }
   
   .slider .slide {
@@ -18,6 +17,6 @@
   } 
   
   .slider .slide:nth-child(1) {
-    background-image: url('menu-background.jpg');
+    background-image: url('slider-images/menu-background.jpg');
   }
 
