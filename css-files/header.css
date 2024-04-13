@@ -21,13 +21,19 @@ body {
 
 .name-header{
     margin-left:10%;
-    padding:15px;
     border-radius:5px;
-    border:none;
-    transition: color 0.3s ease;
     padding:20px;
     font-size:30px;
     font-weight:bold;
+    background-color: transparent;
+    color:white;
+    border:solid;
+    transition:background-color 0.3 color 0.3s ease-in-out
+}
+
+.name-header:hover{
+    color:black;
+    background-color: white;
 }
 
 .text-above-background-top{
