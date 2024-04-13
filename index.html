@@ -24,14 +24,14 @@
         <div class="slide"></div>
     <div>
 
-    <div class="text-above-background-top" style="font-family: Indie Flower, cursive;">
+    <div class="text-above-background-top">
         Welcome to The Lantern
     </div>
 
-    <header id="main-header">
+    <header class="main-header">
         <nav>
-            <div class="name-header-button">
-                <button class="name-header">
+            <div class="name-header-button-container">
+                <button class="name-header-button">
                     Lantern
                 </button>
             </div>
@@ -45,9 +45,9 @@
         </nav>
     </header>
     <main>
-        <section class="about-restaurant-home">
-            <img class="chef-image animated-element" src="image-files/chef-image.jpg">
-            <section class="chef-description menu">
+        <section class="primary-container">
+            <img class="primary-image animated-element" src="image-files/chef-image.jpg">
+            <section class="primary-description menu">
                 <div class="description-title animated-element">About Lantern</div>
                 <div class="description-heading">Our chef cooks the most delicious food for you</div>
                 <div class="description-description animated-element">
@@ -60,24 +60,16 @@
             <section class="menu-top-part">
                 <div class="our-menu">Our Menu</div>
                 <div class="our-menu-title">Discover Our Exclusive Menu</div>
-
             </section>
-
-            <div class="pagination animated-element" id="pagination"> 
-                <a href="#" id="prev" style="visibility: hidden;">Previous</a> 
-                <button class="page-link1"><a href="#" class="page-link" data-page="1">Main</a> </button>
-                <button class="page-link2"><a href="#" class="page-link" data-page="2">Dessert</a> </button>
-                <button class="page-link3"><a href="#" class="page-link" data-page="3">Drinks</a></button> 
-                <a href="#" id="next" style="visibility: hidden;">Next</a> 
-                <p id="page-numbers" style="visibility: hidden;"> </p> 
+            <div class="pagination animated-element"> 
+                <button class="page-link1  mainMenu"><a href="#" class="page-link" data-page="1">Main</a> </button>
+                <button class="page-link2 dessert"><a href="#" class="page-link " data-page="2">Dessert</a> </button>
+                <button class="page-link3 drinks"><a href="#" class="page-link" data-page="3">Drinks</a></button>  
             </div> 
         </section>
         
-
-
-        <div id="data-container">  
+        <div class="data-container">  
             <div class="card-container"> 
-                
                 <section class="card3 animated-element">
                     <section class="card4">
                         <section class="image-holder">
@@ -313,7 +305,7 @@
                             </section>
                         </section>
                         <section class="cost-of-items">
-                            $29
+                            $34
                         </section>
                     </section> 
                     
@@ -331,7 +323,7 @@
                             </section>
                         </section>
                         <section class="cost-of-items">
-                        $29
+                        $45
                         </section>
                     </section>
                 </section>
@@ -350,7 +342,7 @@
                             </section>
                         </section>
                         <section class="cost-of-items">
-                            $29
+                            $33
                         </section>
                     </section> 
                     
@@ -368,7 +360,7 @@
                             </section>
                         </section>
                         <section class="cost-of-items">
-                        $29
+                        $34
                         </section>
                     </section>
                 </section>
@@ -387,7 +379,7 @@
                             </section>
                         </section>
                         <section class="cost-of-items">
-                            $29
+                            $43
                         </section>
                     </section> 
                     
@@ -405,7 +397,7 @@
                             </section>
                         </section>
                         <section class="cost-of-items">
-                        $29
+                        $23
                         </section>
                     </section>
                 </section>
@@ -424,7 +416,7 @@
                             </section>
                         </section>
                         <section class="cost-of-items">
-                            $29
+                            $25
                         </section>
                     </section> 
                     
@@ -442,7 +434,7 @@
                             </section>
                         </section>
                         <section class="cost-of-items">
-                        $29
+                        $27
                         </section>
                     </section>
                 </section>
@@ -498,7 +490,7 @@
                             </section>
                         </section>
                         <section class="cost-of-items">
-                            $29
+                            $32
                         </section>
                     </section> 
                     
@@ -516,7 +508,7 @@
                             </section>
                         </section>
                         <section class="cost-of-items">
-                        $29
+                        $34
                         </section>
                     </section>
                 </section>
@@ -535,7 +527,7 @@
                             </section>
                         </section>
                         <section class="cost-of-items">
-                            $29
+                            $28
                         </section>
                     </section> 
                     
@@ -553,7 +545,7 @@
                             </section>
                         </section>
                         <section class="cost-of-items">
-                        $29
+                        $35
                         </section>
                     </section>
                 </section>
@@ -572,7 +564,7 @@
                             </section>
                         </section>
                         <section class="cost-of-items">
-                            $29
+                            $40
                         </section>
                     </section> 
                     
@@ -590,7 +582,7 @@
                             </section>
                         </section>
                         <section class="cost-of-items">
-                        $29
+                        $45
                         </section>
                     </section>
                 </section>
@@ -609,7 +601,7 @@
                             </section>
                         </section>
                         <section class="cost-of-items">
-                            $29
+                            $45
                         </section>
                     </section> 
                     
@@ -627,7 +619,7 @@
                             </section>
                         </section>
                         <section class="cost-of-items">
-                        $29
+                        $40
                         </section>
                     </section>
                 </section>
@@ -774,10 +766,10 @@
             <div class="column-footer">
                 <div class="title-of-column-footer">Contact Information</div>
                 <ul class="contact-info-list-container" >
-                    <li class="contact-info-list" style="color:grey">198 West 21th Street, Suite 721 New York NY 10016</li>
-                    <li class="contact-info-list" style="color:grey">+91 12121 12121</li>
-                    <li class="contact-info-list" style="color:grey">info@gmail.com</li>
-                    <li class="contact-info-list loc-footer" style="color:grey"><a href="https://maps.app.goo.gl/6eF1Mogvez4x2UyR8" target="_blank">Find Us on Google Maps</a></li>
+                    <li class="contact-info-list" style="color:grey">123 Ravindra Puri, Varanasi</li>
+                    <li class="contact-info-list" style="color:grey">+91 12345 6789</li>
+                    <li class="contact-info-list" style="color:grey">lantern@gmail.com</li>
+                    <li class="contact-info-list loc-footer" style="color:rgb(174, 174, 174)"><a href="https://maps.app.goo.gl/6eF1Mogvez4x2UyR8" target="_blank">Find Us on Google Maps</a></li>
                 </ul>
             </div>
             <div class="column-footer">
@@ -785,10 +777,10 @@
                     Other Branches
                 </div>
                 <ul class="branches-list-container">
-                    <li class="branches-list" style="color:grey">City1</li>
-                    <li class="branches-list" style="color:grey">City2</li>
-                    <li class="branches-list" style="color:grey">City3</li>
-                    <li class="branches-list" style="color:grey">City4</li>
+                    <li class="branches-list" style="color:grey">Jaipur</li>
+                    <li class="branches-list" style="color:grey">Rome</li>
+                    <li class="branches-list" style="color:grey">Mumbai</li>
+                    <li class="branches-list" style="color:grey">Tokyo</li>
                 </ul>
             </div>
         </div>

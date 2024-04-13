@@ -1,32 +1,32 @@
 document.addEventListener("DOMContentLoaded", function() {
-    var header = document.getElementById("main-header");
-    var nameheader = document.querySelector('.name-header');
+    let header = document.querySelector(".main-header");
+    let nameheader = document.querySelector('.name-header-button');
+
     window.addEventListener("scroll", function() {
         if (window.scrollY > header.clientHeight) {
             header.classList.add("inverted");
             nameheader.classList.add('inverted');
-        } else {
+        } 
+        else {
             header.classList.remove("inverted");
             nameheader.classList.remove('inverted');
         }
     });
 });
 
-
-//script.js 
-const cardsPerPage = 10; // Number of cards to show per page 
-const dataContainer = document.getElementById('data-container'); 
-const pagination = document.getElementById('pagination'); 
-const prevButton = document.getElementById('prev'); 
-const nextButton = document.getElementById('next'); 
-const pageNumbers = document.getElementById('page-numbers'); 
+const cardsPerPage = 10;
+const dataContainer = document.querySelector('.data-container'); 
+const pagination = document.querySelector('.pagination'); 
 const pageLinks = document.querySelectorAll('.page-link'); 
+const mainmenu = document.querySelector('.mainMenu');
+const dessert = document.querySelector('.dessert');
+const drinks = document.querySelector('.drinks');
 
 const cards = 
 	Array.from(dataContainer.getElementsByClassName('card4')); 
 
 // Calculate the total number of pages 
-const totalPages = Math.ceil(cards.length / cardsPerPage); 
+const totalPages = (cards.length / cardsPerPage); 
 let currentPage = 1; 
 
 // Function to display cards for a specific page 
@@ -36,60 +36,48 @@ function displayPage(page) {
 	cards.forEach((card, index) => { 
 		if (index >= startIndex && index < endIndex) { 
 			card.style.display = 'flex'; 
-		} else { 
-			card.style.display = 'none'; 
 		} 
+    else{
+      card.style.display = 'none'; 
+    }
 	}); 
 } 
 
 // Function to update pagination buttons and page numbers 
-function updatePagination() { 
-	pageNumbers.textContent = 
-		`Page ${currentPage} of ${totalPages}`; 
-	prevButton.disabled = currentPage === 1; 
-	nextButton.disabled = currentPage === totalPages; 
+function updatePagination() {  
 	pageLinks.forEach((link) => { 
 		const page = parseInt(link.getAttribute('data-page')); 
 		link.classList.toggle('active', page === currentPage); 
 	}); 
 } 
 
-// Event listener for "Previous" button 
-prevButton.addEventListener('click', () => { 
-	if (currentPage > 1) { 
-		currentPage--; 
-		displayPage(currentPage); 
-		updatePagination(); 
-	} 
-}); 
+mainmenu.addEventListener('click', (e) =>
+{
+  e.preventDefault(); 
+  currentPage=1;
+  updatePagination();
+  displayPage(currentPage);
+});
 
-// Event listener for "Next" button 
-nextButton.addEventListener('click', () => { 
-	if (currentPage < totalPages) { 
-		currentPage++; 
-		displayPage(currentPage); 
-		updatePagination(); 
-	} 
-}); 
+dessert.addEventListener('click', (e) =>
+{
+  e.preventDefault(); 
+  currentPage=2;
+  updatePagination();
+  displayPage(currentPage);
+});
 
-// Event listener for page number buttons 
-pageLinks.forEach((link) => { 
-	link.addEventListener('click', (e) => { 
-		e.preventDefault(); 
-		const page = parseInt(link.getAttribute('data-page')); 
-		if (page !== currentPage) { 
-			currentPage = page; 
-			displayPage(currentPage); 
-			updatePagination(); 
-		} 
-	}); 
-}); 
+drinks.addEventListener('click', (e) =>
+{
+  e.preventDefault(); 
+  currentPage=3;
+  updatePagination();
+  displayPage(currentPage);
+});  
 
 // Initial page load 
 displayPage(currentPage); 
 updatePagination();
-
-
 
 const menuButtonNav1 = document.querySelector('.page-link1')
 const menuButtonNav2 = document.querySelector('.page-link2')
@@ -113,7 +101,7 @@ menuButtonNav3.addEventListener('click',()=>{
 });
 
 function isInViewport(element) {
-  var rect = element.getBoundingClientRect();
+  let rect = element.getBoundingClientRect();
   return (
     rect.top >= 0 &&
     rect.left >= 0 &&

@@ -32,7 +32,7 @@ body{
     color:grey;
 }
 
-#data-container{
+.data-container{
     margin-top:90px;
     display:flex;
     justify-content: center;
@@ -98,7 +98,7 @@ body{
 
 .pagination{
     margin-top:80px;
-    width: 50%;
+    width: 35%;
     display:flex;
     justify-content: space-around;
     text-align: center;
@@ -125,23 +125,16 @@ body{
     color:black;
 }
 
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .animated-element {
+.animated-element {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s, transform 0.8s;
-  }
+}
   
-  .animated-element.visible {
+.animated-element.visible {
     opacity: 1;
     transform: translateY(0);
-  }
+}
   
 .customer-review-heading-container{
     margin-top:90px;

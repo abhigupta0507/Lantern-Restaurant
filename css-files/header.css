@@ -1,10 +1,9 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-   height:2000px; /* Just for demo to make scrolling possible */
 }
 
-#main-header {
+.main-header {
     position: fixed;
     width: 100%;
     background-color: transparent; /* Default background color */
@@ -13,13 +12,13 @@ body {
     z-index:1001;
 }
 
-#main-header nav{
+.main-header nav{
     display:flex;
     align-items: center;
     height:100%;
 }
 
-.name-header{
+.name-header-button{
     margin-left:10%;
     border-radius:5px;
     padding:20px;
@@ -31,7 +30,7 @@ body {
     transition:background-color 0.3 color 0.3s ease-in-out
 }
 
-.name-header:hover{
+.name-header-button:hover{
     color:black;
     background-color: white;
 }
@@ -44,19 +43,19 @@ body {
     background-color:transparent;
     font-size:70px;
     color:white;
+    font-family: 'Indie Flower';
 }
 
-.name-header-button{
+.name-header-button-container{
     width:50%;
     transition: color 0.3s ease;
-    
 }
 
-#main-header.inverted {
-    background-color: #333333; /* Inverted background color */
+.main-header.inverted {
+    background-color: #333333;
 }
 
-#main-header nav ul {
+.main-header nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -65,39 +64,38 @@ body {
     align-items: center;
 }
 
-#main-header nav ul li {
+.main-header nav ul li {
     display: inline;
 }
 
-#main-header nav ul li a {
+.main-header nav ul li a {
     text-decoration: none;
     color: white; /* Default text color */
     padding: 10px 20px;
     transition: color 0.3s ease;
 }
 
-#main-header.inverted nav ul li a {
+.main-header.inverted nav ul li a {
     color: #ffffff; /* Inverted text color */
 }
 
-.name-header.inverted{
+.name-header-button.inverted{
     color:white;
     background-color: black;
 }
 
-.about-restaurant-home{
+.primary-container{
     display:flex;
     padding-top:600px;
     justify-content: space-evenly;
-    
 }
 
-.chef-image{
+.primary-image{
     width:45%;
     border-radius:10px;
 }
 
-.chef-description{
+.primary-description{
     width:35%;
     font-family:arial;
     display: flex;
@@ -115,7 +113,6 @@ body {
 .description-heading{
     font-size:32px;
     margin-bottom:30px;
-
 }
 
 .description-description{

@@ -1,18 +1,18 @@
-
 document.addEventListener("DOMContentLoaded", function() {
-    var header = document.getElementById("main-header");
-    var nameheader = document.querySelector('.name-header');
-    window.addEventListener("scroll", function() {
-        if (window.scrollY > header.clientHeight) {
-            header.classList.add("inverted");
-            nameheader.classList.add('inverted');
-        } else {
-            header.classList.remove("inverted");
-            nameheader.classList.remove('inverted');
-        }
-    });
-});
+  let header = document.querySelector(".main-header");
+  let nameheader = document.querySelector('.name-header-button');
 
+  window.addEventListener("scroll", function() {
+      if (window.scrollY > header.clientHeight) {
+          header.classList.add("inverted");
+          nameheader.classList.add('inverted');
+      } 
+      else {
+          header.classList.remove("inverted");
+          nameheader.classList.remove('inverted');
+      }
+  });
+});
 
 
 function isInViewport(element) {
