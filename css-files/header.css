@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+   height:2000px; /* Just for demo to make scrolling possible */
+}
+
+#main-header {
+    position: fixed;
+    width: 100%;
+    background-color: transparent; /* Default background color */
+    transition: background-color 0.3s ease;
+    height:100px;
+    z-index:1001;
+}
+
+#main-header nav{
+    display:flex;
+    align-items: center;
+    height:100%;
+}
+
+.name-header{
+    margin-left:10%;
+    padding:15px;
+    border-radius:5px;
+    border:none;
+    transition: color 0.3s ease;
+    padding:20px;
+    font-size:30px;
+    font-weight:bold;
+}
+
+.text-above-background-top{
+    position:absolute;
+    z-index:1000;
+    left:20%;
+    top:45%;
+    background-color:transparent;
+    font-size:70px;
+    color:white;
+}
+
+.name-header-button{
+    width:50%;
+    transition: color 0.3s ease;
+    
+}
+
+#main-header.inverted {
+    background-color: #333333; /* Inverted background color */
+}
+
+#main-header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#main-header nav ul li {
+    display: inline;
+}
+
+#main-header nav ul li a {
+    text-decoration: none;
+    color: white; /* Default text color */
+    padding: 10px 20px;
+    transition: color 0.3s ease;
+}
+
+#main-header.inverted nav ul li a {
+    color: #ffffff; /* Inverted text color */
+}
+
+.name-header.inverted{
+    color:white;
+    background-color: black;
+}
+
+.about-restaurant-home{
+    display:flex;
+    padding-top:600px;
+    justify-content: space-evenly;
+    
+}
+
+.chef-image{
+    width:45%;
+    border-radius:10px;
+}
+
+.chef-description{
+    width:35%;
+    font-family:arial;
+    display: flex;
+    flex-direction: column;
+    padding:0px 40px 0px 40px;
+}
+
+.description-title{
+    color:rgb(163, 163, 163);
+    font-size:20px;
+    margin-bottom:20px;
+    margin-top:40px;
+}
+
+.description-heading{
+    font-size:32px;
+    margin-bottom:30px;
+
+}
+
+.description-description{
+    color:grey;
+    font-family: 'Poppins', sans-serif;
+    line-height:24px;
+}
+
+.contact-info-list a{
+    text-decoration: none;
+    color:grey;
+}
+
+.contact-info-list a:hover{
+    text-decoration: none;
+    color:white;
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+

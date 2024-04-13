@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css-files/header.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css-files/backgroundmenu.css">
+    <link rel="stylesheet" href="css-files/menu.css">
+    <link rel="icon" type="image/x-icon" href="image-files/favicon-lantern.png">
+    <title>Lantern Restaurant</title>
+</head>
+<body>
+    <div class="slider">
+        <div class="slide"></div>
+    <div>
+        <div class="text-above-background-top" style="font-family: Indie Flower, cursive;">
+            Explore Our Delicious Menu
+        </div>
+    <header id="main-header">
+        <nav><div class="name-header-button"><button class="name-header">Lantern</button></div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html" style="color:orange;">Menu</a></li>
+                <li><a href="specialities.html">Specialities</a></li>
+                <li><a href="#reservation">Reservation</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <!-- Add more menu items as needed -->
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="about-restaurant-home ">
+            <img class="chef-image animated-element" src="image-files/menu-menuimage.png">
+            <section class="chef-description menu">
+                <div class="description-title animated-element">Our Menu</div>
+                <div class="description-heading">A place where quality and hygiene are in sync</div>
+                <div class="description-description animated-element">
+                    Embark on a culinary adventure with our diverse menu, offering a symphony of flavors to tantalize your taste buds. From hearty classics to innovative creations, each dish is crafted with care to create an unforgettable dining experience.
+                </div>
+            </section>
+        </section>
+
+        <section class="menu-section-container">
+            <section class="menu-top-part">
+                <div class="our-menu">Our Menu</div>
+                <div class="our-menu-title">Discover Our Exclusive Menu</div>
+
+            </section>
+
+            <div class="pagination animated-element" id="pagination"> 
+                <a href="#" id="prev" style="visibility: hidden;">Previous</a> 
+                <button class="page-link1"><a href="#" class="page-link" data-page="1">Main</a> </button>
+                <button class="page-link2"><a href="#" class="page-link" data-page="2">Dessert</a> </button>
+                <button class="page-link3"><a href="#" class="page-link" data-page="3">Drinks</a></button> 
+                <a href="#" id="next" style="visibility: hidden;">Next</a> 
+                <p id="page-numbers" style="visibility: hidden;"> </p> 
+            </div> 
+        </section>
+        
+
+
+        <div id="data-container">  
+            <div class="card-container"> 
+                
+                <section class="card3 animated-element">
+                    <section class="card4">
+                        <section class="image-holder">
+                            <img class="image-of-food" src="image-files/menu-images/maindish1.png">
+                        </section>
+                        <section class="middle-segment-of-items">
+                            <div class="title-of-items-inmenu">
+                                Grilled Beef with herbs
+                            </div>
+                            <section class="ingredients-of-items-inmenu">
+                                Meat,Potatoes,spinach
+                            </section>
+                        </section>
+                        <section class="cost-of-items">
+                            $20
+                        </section>
+                    </section> 
+                    
+
+                    <section class="card4"> 
+                        <section class="image-holder">
+                            <img class="image-of-food" src="image-files/menu-images/maindish2.png">
+                        </section>
+                        <section class="middle-segment-of-items">
+                            <div class="title-of-items-inmenu">
+                                Mini Rolls
+                            </div>
+                            <section class="ingredients-of-items-inmenu">
+                            Potatoes,Coriander,Carrot,Lettuce
+                            </section>
+                        </section>
+                        <section class="cost-of-items">
+                        $30
+                        </section>
+                    </section>
+                </section>
+
+                <section class="card3 animated-element">
+                    <section class="card4">
+                        <section class="image-holder">
+                            <img class="image-of-food" src="image-files/menu-images/maindish3.png">
+                        </section>
+                        <section class="middle-segment-of-items">
+                            <div class="title-of-items-inmenu">
+                                Special Meat Balls
+                            </div>
+                            <section class="ingredients-of-items-inmenu">
+                                Meat,Potatoes
+                            </section>
+                        </section>
+                        <section class="cost-of-items">
+                            $40
+                        </section>
+                    </section> 
+                    
+
+                    <section class="card4 "> 
+                        <section class="image-holder">
+                            <img class="image-of-food" src="image-files/menu-images/maindish4.jpeg">
+                        </section>
+                        <section class="middle-segment-of-items">
+                            <div class="title-of-items-inmenu">
+                                Cheese Bread with salad
+                            </div>
+                            <section class="ingredients-of-items-inmenu">
+                            Bread,Onions,Carror,Cheese
+                            </section>
+                        </section>
+                        <section class="cost-of-items">
+                        $29
+                        </section>
+                    </section>
+                </section>
+
+                <section class="card3 animated-element">
+                    <section class="card4">
+                        <section class="image-holder">
+                            <img class="image-of-food" src="image-files/menu-images/maindish5.jpeg">
+                        </section>
+                        <section class="middle-segment-of-items">
+                            <div class="title-of-items-inmenu">
+                                Grilled Meat with Sauce
+                            </div>
+                            <section class="ingredients-of-items-inmenu">
+                                Meat,Potatoes,Mushrooms
+                            </section>
+                        </section>
+                        <section class="cost-of-items">
+                            $29
+                        </section>
+                    </section> 
+                    
+
+                    <section class="card4"> 
+                        <section class="image-holder">
+                            <img class="image-of-food" src="image-files/menu-images/maindish6.jpeg">
+                        </section>
+                        <section class="middle-segment-of-items">
+                            <div class="title-of-items-inmenu">
+                                Stuffed Bread with cheese
+                            </div>
+                            <section class="ingredients-of-items-inmenu">
+                            Bread,cheese,herbs
+                            </section>
+                        </section>
+                        <section class="cost-of-items">
+                        $30
+                        </section>
+                    </section>
+                </section>
+
+                <section class="card3 animated-element">
+                    <section class="card4">
+                        <section class="image-holder">
+                            <img class="image-of-food" src="image-files/menu-images/maindish7.jpeg">
+                        </section>
+                        <section class="middle-segment-of-items">
+                            <div class="title-of-items-inmenu">
+                                Garlic Bread with soyas
+                            </div>
+                            <section class="ingredients-of-items-inmenu">
+                                Bread,Garlic
+                            </section>
+                        </section>
+                        <section class="cost-of-items">
+                            $25
+                        </section>
+                    </section> 
+                    
+
+                    <section class="card4 "> 
+                        <section class="image-holder">
+                            <img class="image-of-food" src="image-files/menu-images/maindish8.jpeg">
+                        </section>
+                        <section class="middle-segment-of-items">
+                            <div class="title-of-items-inmenu">
+                                Crushed paneer and veggies
+                            </div>
+                            <section class="ingredients-of-items-inmenu">
+                                Paneer,capsicum,tomatoes
+                            </section>
+                        </section>
+                        <section class="cost-of-items">
+                        $50
+                        </section>
+                    </section>
+                </section>
+
+                <section class="card3 animated-element card5">
+                    <section class="card4">
+                        <section class="image-holder">
+                            <img class="image-of-food" src="image-files/menu-images/maindish9.jpeg">
+                        </section>
+                        <section class="middle-segment-of-items">
+                            <div class="title-of-items-inmenu">
+                                Egg with Bread Combo
+                            </div>
+                            <section class="ingredients-of-items-inmenu">
+                                Egg,Bread
+                            </section>
+                        </section>
+                        <section class="cost-of-items">
+                            $45
+                        </section>
+                    </section> 
+                    
+
+                    <section class="card4"> 
+                        <section class="image-holder">
+                            <img class="image-of-food" src="image-files/menu-images/maindish10.jpeg">
+                        </section>
+                        <section class="middle-segment-of-items">
+                            <div class="title-of-items-inmenu">
+                            Paneer Chicken Masala
+                            </div>
+                            <section class="ingredients-of-items-inmenu">
+                            Meat,Egg,Paneer
+                            </section>
+                        </section>
+                        <section class="cost-of-items">
+                        $100
+                        </section>
+                    </section>
+                </section>
+                <section class="card3 animated-element header">
+                    <section class="card4">
+                        <section class="image-holder">
+                            <img class="image-of-food" src="image-files/menu-images/dessert1.jpeg">
+                        </section>
+                        <section class="middle-segment-of-items">
+                            <div class="title-of-items-inmenu">
+                                Chocolate Cake with cream
+                            </div>
+                            <section class="ingredients-of-items-inmenu">
+                                
+                            </section>
+                        </section>
+                        <section class="cost-of-items">
+                            $29
+                        </section>
+                    </section> 
+                    
+
+                    <section class="card4"> 
+                        <section class="image-holder">
+                            <img class="image-of-food" src="image-files/menu-images/dessert2.jpeg">
+                        </section>
+                        <section class="middle-segment-of-items">
+                            <div class="title-of-items-inmenu">
+                                Strawberry Cookie with Vanilla
+                            </div>
+                            <section class="ingredients-of-items-inmenu">
+                            
+                            </section>
+                        </section>
+                        <section class="cost-of-items">
+                        $30
+                        </section>
+                    </section>
+                </section>
+
+                <section class="card3 animated-element header">
+                    <section class="card4">
+                        <section class="image-holder">
+                            <img class="image-of-food" src="image-files/menu-images/dessert3.jpeg">
+                        </section>
+                        <section class="middle-segment-of-items">
+                            <div class="title-of-items-inmenu">
+                                Strawberry cake with cream
+                            </div>
+                            <section class="ingredients-of-items-inmenu">
+                                
+                            </section>
+                        </section>
+                        <section class="cost-of-items">
+                            $29
+                        </section>
+                    </section> 
+                    
+
+                    <section class="card4"> 
+                        <section class="image-holder">
+                            <img class="image-of-food" src="image-files/menu-images/dessert4.jpeg">
+                        </section>
+                        <section class="middle-segment-of-items">
+                            <div class="title-of-items-inmenu">
+                            Chocolate Smoothie in coke
+                            </div>
+                            <section class="ingredients-of-items-inmenu">
+                            
+                            </section>
+                        </section>
+                        <section class="cost-of-items">
+                        $29
+                        </section>
+                    </section>
+                </section>
+
+                <section class="card3 animated-element header">
+                    <section class="card4">
+                        <section class="image-holder">
+                            <img class="image-of-food" src="image-files/menu-images/dessert5.jpeg">
+                        </section>
+                        <section class="middle-segment-of-items">
+                            <div class="title-of-items-inmenu">
+                                Chocolate On vanilla cake
+                            </div>
+                            <section class="ingredients-of-items-inmenu">
+                                
+                            </section>
+                        </section>
+                        <section class="cost-of-items">
+                            $29
+                        </section>
+                    </section> 
+                    
+
+                    <section class="card4"> 
+                        <section class="image-holder">
+                            <img class="image-of-food" src="image-files/menu-images/dessert6.jpeg">
+                        </section>
+                        <section class="middle-segment-of-items">
+                            <div class="title-of-items-inmenu">
+                            Vanilla shake with chocolate
+                            </div>
+                            <section class="ingredients-of-items-inmenu">
+                            
+                            </section>
+                        </section>
+                        <section class="cost-of-items">
+                        $29
+                        </section>
+                    </section>
+                </section>
+
+                <section class="card3 animated-element header">
+                    <section class="card4">
+                        <section class="image-holder">
+                            <img class="image-of-food" src="image-files/menu-images/dessert7.jpeg">
+                        </section>
+                        <section class="middle-segment-of-items">
+                            <div class="title-of-items-inmenu">
+                                Cherry Cookies in Strawberry
+                            </div>
+                            <section class="ingredients-of-items-inmenu">
+                               
+                            </section>
+                        </section>
+                        <section class="cost-of-items">
+                            $29
+                        </section>
+                    </section> 
+                    
+
+                    <section class="card4"> 
+                        <section class="image-holder">
+                            <img class="image-of-food" src="image-files/menu-images/dessert8.jpeg">
+                        </section>
+                        <section class="middle-segment-of-items">
+                            <div class="title-of-items-inmenu">
+                            Vanilla cookie with chocolate
+                            </div>
+                            <section class="ingredients-of-items-inmenu">
+                            
+                            </section>
+                        </section>
+                        <section class="cost-of-items">
+                        $29
+                        </section>
+                    </section>
+                </section>
+
+                <section class="card3 animated-element header">
+                    <section class="card4">
+                        <section class="image-holder">
+                            <img class="image-of-food" src="image-files/menu-images/dessert9.jpeg">
+                        </section>
+                        <section class="middle-segment-of-items">
+                            <div class="title-of-items-inmenu">
+                                Vanilla cookie with dryfruits
+                            </div>
+                            <section class="ingredients-of-items-inmenu">
+                               
+                            </section>
+                        </section>
+                        <section class="cost-of-items">
+                            $29
+                        </section>
+                    </section> 
+                    
+
+                    <section class="card4"> 
+                        <section class="image-holder">
+                            <img class="image-of-food" src="image-files/menu-images/dessert10.jpeg">
+                        </section>
+                        <section class="middle-segment-of-items">
+                            <div class="title-of-items-inmenu">
+                             Hershey Brownie Cake 
+                            </div>
+                            <section class="ingredients-of-items-inmenu">
+                            
+                            </section>
+                        </section>
+                        <section class="cost-of-items">
+                        $29
+                        </section>
+                    </section>
+                </section>
+
+                <section class="card3 animated-element header">
+                    <section class="card4">
+                        <section class="image-holder">
+                            <img class="image-of-food" src="image-files/menu-images/drinks1.jpeg">
+                        </section>
+                        <section class="middle-segment-of-items">
+                            <div class="title-of-items-inmenu">
+                                Strawberry Juice
+                            </div>
+                            <section class="ingredients-of-items-inmenu">
+                                
+                            </section>
+                        </section>
+                        <section class="cost-of-items">
+                            $29
+                        </section>
+                    </section> 
+                    
+
+                    <section class="card4"> 
+                        <section class="image-holder">
+                            <img class="image-of-food" src="image-files/menu-images/drinks2.jpeg">
+                        </section>
+                        <section class="middle-segment-of-items">
+                            <div class="title-of-items-inmenu">
+                                Pomegranate Juice
+                            </div>
+                            <section class="ingredients-of-items-inmenu">
+                           
+                            </section>
+                        </section>
+                        <section class="cost-of-items">
+                        $29
+                        </section>
+                    </section>
+                </section>
+
+                <section class="card3 animated-element header">
+                    <section class="card4">
+                        <section class="image-holder">
+                            <img class="image-of-food" src="image-files/menu-images/drinks3.jpeg">
+                        </section>
+                        <section class="middle-segment-of-items">
+                            <div class="title-of-items-inmenu">
+                                Strawberry Smoothie
+                            </div>
+                            <section class="ingredients-of-items-inmenu">
+                                
+                            </section>
+                        </section>
+                        <section class="cost-of-items">
+                            $29
+                        </section>
+                    </section> 
+                    
+
+                    <section class="card4"> 
+                        <section class="image-holder">
+                            <img class="image-of-food" src="image-files/menu-images/drinks4.jpeg">
+                        </section>
+                        <section class="middle-segment-of-items">
+                            <div class="title-of-items-inmenu">
+                            Coca Cola
+                            </div>
+                            <section class="ingredients-of-items-inmenu">
+                            
+                            </section>
+                        </section>
+                        <section class="cost-of-items">
+                        $29
+                        </section>
+                    </section>
+                </section>
+
+                <section class="card3 animated-element header">
+                    <section class="card4">
+                        <section class="image-holder">
+                            <img class="image-of-food" src="image-files/menu-images/drinks5.jpeg">
+                        </section>
+                        <section class="middle-segment-of-items">
+                            <div class="title-of-items-inmenu">
+                               Combo of Cold drinks
+                            </div>
+                            <section class="ingredients-of-items-inmenu">
+                                
+                            </section>
+                        </section>
+                        <section class="cost-of-items">
+                            $29
+                        </section>
+                    </section> 
+                    
+
+                    <section class="card4"> 
+                        <section class="image-holder">
+                            <img class="image-of-food" src="image-files/menu-images/drinks6.jpeg">
+                        </section>
+                        <section class="middle-segment-of-items">
+                            <div class="title-of-items-inmenu">
+                                Fruit Juice
+                            </div>
+                            <section class="ingredients-of-items-inmenu">
+                            
+                            </section>
+                        </section>
+                        <section class="cost-of-items">
+                        $29
+                        </section>
+                    </section>
+                </section>
+
+                <section class="card3 animated-element header">
+                    <section class="card4">
+                        <section class="image-holder">
+                            <img class="image-of-food" src="image-files/menu-images/drinks7.jpeg">
+                        </section>
+                        <section class="middle-segment-of-items">
+                            <div class="title-of-items-inmenu">
+                                Creamy Drink
+                            </div>
+                            <section class="ingredients-of-items-inmenu">
+                               
+                            </section>
+                        </section>
+                        <section class="cost-of-items">
+                            $29
+                        </section>
+                    </section> 
+                    
+
+                    <section class="card4"> 
+                        <section class="image-holder">
+                            <img class="image-of-food" src="image-files/menu-images/drinks8.jpeg">
+                        </section>
+                        <section class="middle-segment-of-items">
+                            <div class="title-of-items-inmenu">
+                                Mint Mohito
+                            </div>
+                            <section class="ingredients-of-items-inmenu">
+                            
+                            </section>
+                        </section>
+                        <section class="cost-of-items">
+                        $29
+                        </section>
+                    </section>
+                </section>
+
+                <section class="card3 animated-element header">
+                    <section class="card4">
+                        <section class="image-holder">
+                            <img class="image-of-food" src="image-files/menu-images/drinks9.jpeg">
+                        </section>
+                        <section class="middle-segment-of-items">
+                            <div class="title-of-items-inmenu">
+                                MockTail
+                            </div>
+                            <section class="ingredients-of-items-inmenu">
+                                
+                            </section>
+                        </section>
+                        <section class="cost-of-items">
+                            $29
+                        </section>
+                    </section> 
+                    
+
+                    <section class="card4"> 
+                        <section class="image-holder">
+                            <img class="image-of-food" src="image-files/menu-images/drinks10.jpeg">
+                        </section>
+                        <section class="middle-segment-of-items">
+                            <div class="title-of-items-inmenu">
+                            Mango Juice
+                            </div>
+                            <section class="ingredients-of-items-inmenu">
+                            
+                            </section>
+                        </section>
+                        <section class="cost-of-items">
+                        $29
+                        </section>
+                    </section>
+                </section>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="footer-container">
+            <div class="column-footer">
+                <div class="title-of-column-footer" style="margin-bottom:65px;">Lantern</div>
+                <div class="description-of-column" style="color:grey">Discover Lantern: where fresh ingredients and exquisite flavors create a culinary journey. Join us for an unforgettable dining experience where every bite is a story of passion and taste</div>
+                <div class="social-media-profiles">
+                    <button class="social-media-button">
+                        <img class="social-media-photo" src="image-files/facebook.png">
+                    </button>
+                    <button class="social-media-button">
+                        <img class="social-media-photo" src="image-files/instagram.png">
+                    </button>
+                    <button class="social-media-button">
+                        <img class="social-media-photo" src="image-files/twitter.png">
+                    </button>
+                </div>
+            </div>
+            <div class="column-footer">
+                <div class="title-of-column-footer">Opening Hours</div>
+                <ul class="opening-hrs-list-container">
+                    <li class="opening-hrs-list"><span>Monday</span> 10:00-22:00</li>
+                    <li class="opening-hrs-list"><span>Tueday</span> 10:00-22:00</li>
+                    <li class="opening-hrs-list"><span>Wednesday</span> 10:00-22:00</li>
+                    <li class="opening-hrs-list"><span>Thursday</span> 10:00-22:00</li>
+                    <li class="opening-hrs-list"><span>Friday</span> 10:00-22:00</li>
+                    <li class="opening-hrs-list"><span>Saturday</span> 09:00-23:00</li>
+                    <li class="opening-hrs-list"><span>Sunday</span> 08:00-23:00</li>
+
+                </ul>
+            </div>
+            <div class="column-footer">
+                <div class="title-of-column-footer">Contact Information</div>
+                <ul class="contact-info-list-container" >
+                    <li class="contact-info-list" style="color:grey">198 West 21th Street, Suite 721 New York NY 10016</li>
+                    <li class="contact-info-list" style="color:grey">+91 12121 12121</li>
+                    <li class="contact-info-list" style="color:grey">info@gmail.com</li>
+                    <li class="contact-info-list loc-footer" style="color:grey"><a href="https://maps.app.goo.gl/6eF1Mogvez4x2UyR8" target="_blank">Find Us on Google Maps</a></li>
+                </ul>
+            </div>
+            <div class="column-footer">
+                <div class="title-of-column-footer">
+                    Other Branches
+                </div>
+                <ul class="branches-list-container">
+                    <li class="branches-list" style="color:grey">City1</li>
+                    <li class="branches-list" style="color:grey">City2</li>
+                    <li class="branches-list" style="color:grey">City3</li>
+                    <li class="branches-list" style="color:grey">City4</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="copyright-footer">Copyright ©2024 All rights reserved</div>
+    <script src="script2.js"></script>
+</body>
+</html>
