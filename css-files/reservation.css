@@ -2,6 +2,11 @@
     width:500px;
 }
 
+.title-reservation-page{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
 #personcount-reserve{
     width:400px;
     color:grey;

@@ -68,7 +68,7 @@
                       <textarea name="message" id="message-contact" class="form-control" placeholder="Message" required></textarea>
                     </div>
                     <div class="form-group">
-                      <input type="submit" onclick="sendEmail()" value="Send"class="send-button-form btn btn-primary py-3 px-5">
+                      <input type="submit" id="submit" onclick="sendEmail()" value="Send"class="send-button-form btn btn-primary py-3 px-5">
                     </div>
 
                   </form>
@@ -138,15 +138,37 @@
     <div class="copyright-footer">Copyright ©2024 All rights reserved</div>
 
     <script src="scripts/specialities.js"></script>
-    <script src="scripts/message.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script type="text/javascript">
-      (function () {
-        // https://dashboard.emailjs.com/admin/account
-        emailjs.init({
-          publicKey: "6H4nqXZg_4aAguaw8",
-        });
-      })();
-    </script>
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+      import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
+
+ const firebaseConfig = {
+   apiKey: "AIzaSyCZKKEwPhav9um9nMUFbrNQLZcFFFrVNp4",
+   authDomain: "restaurant-48fe6.firebaseapp.com",
+   projectId: "restaurant-48fe6",
+   storageBucket: "restaurant-48fe6.appspot.com",
+   messagingSenderId: "191750874067",
+   appId: "1:191750874067:web:3645494c9119a2fe63c526"
+ };
+
+ // Initialize Firebase
+ const app = initializeApp(firebaseConfig);
+ const reserveDB = getDatabase(app);
+
+
+ document.getElementById('submit').addEventListener('click',function(e){
+   e.preventDefault();
+   set(ref(reserveDB, 'Messages/' + document.getElementById('name-contact').value),
+ {
+   customerName : document.getElementById('name-contact').value,
+   mobile : document.getElementById('mobile-contact').value,
+   email : document.getElementById('email-contact').value,
+   message : document.getElementById('message-contact').value,
+ });
+   alert('Message Sent !!');
+
+ })
+
+   </script>
   </body>
 </html>
