@@ -2,10 +2,10 @@
 .customer-review-heading-container{
     margin-top:90px;
     text-align:center;
-    margin-bottom:80px;
+    margin-bottom:30px;
     display:flex;
     flex-direction: column;
-    row-gap:30px;
+    row-gap:15px;
 }
 
 .customer-review-container-top{

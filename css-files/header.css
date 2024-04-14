@@ -37,7 +37,7 @@ body {
 
 .text-above-background-top{
     position:absolute;
-    z-index:1000;
+    z-index:1;
     left:20%;
     top:45%;
     background-color:transparent;
@@ -60,7 +60,7 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -87,7 +87,7 @@ body {
 .primary-container{
     display:flex;
     padding-top:600px;
-    justify-content: space-evenly;
+    justify-content:space-around;
 }
 
 .primary-image{
@@ -119,6 +119,15 @@ body {
     color:grey;
     font-family: 'Poppins', sans-serif;
     line-height:24px;
+}
+
+.sign-header-button{
+    color:white;
+    background-color: transparent;
+    border:solid white 2px;
+    padding:10px;
+    font-size:15px;
+    margin-right:20px;
 }
 
 

@@ -18,6 +18,9 @@
     <link rel="icon" type="image/x-icon" href="image-files/favicon-lantern.png">
     <link rel="stylesheet" href="css-files/reservation.css">
     <link rel="stylesheet" href="css-files/footer.css">
+    <link rel="stylesheet" href="css-files/signup.css">
+
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js"></script>
     <title>Lantern Restaurant</title>
 </head>
 <body>
@@ -39,23 +42,71 @@
                 <li><a href="menu.html" >Menu</a></li>
                 <li><a href="specialities.html">Specialities</a></li>
                 <li><a href="reservation.html" style="color:orange;">Reservation</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><button class="sign-header-button"></button></li>
             </ul>
         </nav>
     </header>
     
     <main>
-      <section class="title-reservation-page">
-        Fill up Details and Book Your Table
-      </section>
           <section class="primary-container">
-            
               <section class="restaurant-photo-reservation-container">
                   <img class="restaurant-photo-reservation" src="image-files/reserved-table.jpg">
-              </section>            
+              </section>  
+              <div class="asking-for-signup">
+                <div class="asking-for-signup-text">
+                  Please Log in before booking a Table
+                </div>
+                <div class="sign-log-button-container">
+                  <button class="sign-up-button myBtn" id="myBtn">
+                    Sign Up
+                  </button>
+                  <button class="log-in-button myBtn" id="myBtn">
+                    Log in
+                  </button>
+                </div>
+
+                <div id="myModal" class="modal">
+                  <div class="modal-content">
+                    <div class="inner-modal">
+                      
+                      <div class="lantern-image-container">
+                        <img src="css-files/slider-images/lantern-signin.jpg" class="signin-lantern">
+                      </div>
+
+                      <div class="sign-in-page">
+                        <div class="sign-in-title">
+                          Sign In
+                        </div>
+
+                        <form id="sign-in-form">
+                          <input type="email" id="email-signin" placeholder="Enter your Email" required>
+                          <input type="password" id="password-signin" placeholder="Enter your Password" required>
+                          <input type="submit" id="submit-signinform" name="submit-signinform">
+                          <input type="submit" id="submit-loginform" name="submit-loginform">
+                        </form>
+
+                        <div class="alternate-method">
+                          <div class="text-login-or-signin" >Have an account already??</div>
+                          <button class="login-or-signin-button-ask2">Sign In</button>
+                          <button class="login-or-signin-button-ask">Log In</button>
+                        </div>
+                  
+                        <button class="google-sign-in-btn">
+                          Sign in with Google
+                        </button>
+                      </div>
+                      <span class="close">&times;</span>
+                    </div>   
+                  </div>
+                </div>
+              </div>
+
               <form id="reserve-form">
                   <div class="row">
-
+                    <div class="title-reserve-form">
+                      Secure Your Spot
+                    </div>
                     <div class="name-form form-group">
                       <input type="text" id="name-contact" name="name" class="form-control" placeholder="Your Name" required>
                     </div>
@@ -79,7 +130,8 @@
                       <option value="1">1</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
-                      <option value="4">4+</option>
+                      <option value="4">4</option>
+                      <option value="4">5</option>
                     </select>
                   </div>
 
@@ -144,38 +196,134 @@
     </footer>
     <div class="copyright-footer">Copyright ©2024 All rights reserved</div>
     <script src="scripts/specialities.js"></script>
+    
     <script type="module">
-       import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
-       import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
+        document.querySelector('.modal').style.display='block';
+        document.querySelector('.login-or-signin-button-ask2').style.display='none';
+        
+        import { initializeApp} from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+        import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
+        import { signInWithEmailAndPassword,signOut,createUserWithEmailAndPassword,onAuthStateChanged, getAuth, GoogleAuthProvider,signInWithPopup } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
 
-  const firebaseConfig = {
-    apiKey: "AIzaSyCZKKEwPhav9um9nMUFbrNQLZcFFFrVNp4",
-    authDomain: "restaurant-48fe6.firebaseapp.com",
-    projectId: "restaurant-48fe6",
-    storageBucket: "restaurant-48fe6.appspot.com",
-    messagingSenderId: "191750874067",
-    appId: "1:191750874067:web:3645494c9119a2fe63c526"
-  };
+        const firebaseConfig = {
+          apiKey: "AIzaSyCZKKEwPhav9um9nMUFbrNQLZcFFFrVNp4",
+          authDomain: "restaurant-48fe6.firebaseapp.com",
+          projectId: "restaurant-48fe6",
+          storageBucket: "restaurant-48fe6.appspot.com",
+          messagingSenderId: "191750874067",
+          appId: "1:191750874067:web:3645494c9119a2fe63c526"
+        };
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const reserveDB = getDatabase(app);
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const DB = getDatabase(app);
 
+        document.getElementById('submit').addEventListener('click',function(e){
+          e.preventDefault();
+          set(ref(DB, 'Customer/' + document.getElementById('name-contact').value),
+          {
+              customerName : document.getElementById('name-contact').value,
+              mobile : document.getElementById('mobile-contact').value,
+              email : document.getElementById('email-contact').value,
+              Date : document.getElementById('date-contact').value,
+              Count : document.getElementById('personcount-reserve').value,
+          });
+          alert('Booking done !!');
+        });
 
-  document.getElementById('submit').addEventListener('click',function(e){
-    e.preventDefault();
-    set(ref(reserveDB, 'Customer/' + document.getElementById('name-contact').value),
-  {
-    customerName : document.getElementById('name-contact').value,
-    mobile : document.getElementById('mobile-contact').value,
-    email : document.getElementById('email-contact').value,
-    Date : document.getElementById('date-contact').value,
-    Count : document.getElementById('personcount-reserve').value,
-  });
-    alert('Booking done !!');
+        let auth=getAuth();
+        auth.languageCode = 'en';
 
-  })
+        //Google Login
+        const provider = new GoogleAuthProvider();
+
+        const googleLogin = document.querySelector('.google-sign-in-btn');
+        googleLogin.addEventListener('click',function(){
+          auth = getAuth(app);
+          signInWithPopup(auth, provider).then((result) => {
+            // const credential = GoogleAuthProvider.credentialFromResult(result);
+            // const user = result.user;
+            document.querySelector('.modal').style.display = "none";
+            document.querySelector('.asking-for-signup').style.display = 'none';
+            document.querySelector('#reserve-form').style.display='flex';
+            
+            alert("You have successfully signed In!!");
+
+          }).catch((error) => {
+            alert('Failed to Sign in!!');
+          });
+        })
+
+        //Custom sign in
+        const signinheader = document.querySelector('.sign-header-button');
+        const signUpForm = document.querySelector('#submit-signinform');
+        signUpForm.addEventListener('click',async (e)=>
+        {
+          e.preventDefault();
+          const emailsign = document.querySelector('#email-signin').value;
+          const passsign = document.querySelector('#password-signin').value;
+
+          auth=getAuth();
+          try {
+            const userCredential = await createUserWithEmailAndPassword(auth,emailsign,passsign);
+            alert('You have Signed In Successfully!!');
+          } 
+          catch (error) {
+            alert('Email Already In Use!!');
+          }});
+        
+        let a = 0;
+
+        onAuthStateChanged(auth, (user) => {
+          if(user) {
+            const reserveform = document.querySelector('#reserve-form');
+            reserveform.style.display = 'flex';
+            const modalwin = document.querySelector('.asking-for-signup');
+            modalwin.style.display = 'none';
+            signinheader.textContent='Log out';
+            a=0;
+        }
+
+          else {
+            document.querySelector('#reserve-form').style.display = 'none';
+            document.querySelector('.asking-for-signup').style.display = 'block';
+            signinheader.textContent='Sign In';
+            a=1;
+          }
+        });
+
+      signinheader.onclick = async (e)=>{
+        window.location.href = "reservation.html"
+        if(a==1){
+        //sign in 
+          e.preventDefault();
+          document.querySelector('.modal').style.display='block';
+        }
+        else{
+          //sign out
+          e.preventDefault();
+          try {
+          await signOut(auth);
+          alert('You have logged Out successfully!!');
+          } catch (error) {
+            console.log(error.code);
+          }
+        }
+      }
+
+      document.querySelector('#submit-loginform').addEventListener('click', async(e) => {
+        e.preventDefault();
+        const emailsign = document.querySelector('#email-signin').value;
+        const passsign = document.querySelector('#password-signin').value;
+        try {
+          const userCredential = await signInWithEmailAndPassword(auth,emailsign,passsign);
+          alert('You have logged in!!');
+        } catch (e) {
+            alert('Incorrect username or password or email doesn\'t exist!!');
+        }
+      });
 
     </script>
+    <script src="scripts/signup.js"></script>
   </body>
 </html>

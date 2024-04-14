@@ -1,0 +1,187 @@
+.asking-for-signup{
+    display:flex;
+    flex-direction: column;
+}
+
+.asking-for-signup-text{
+    font-size:30px;
+    margin-top:20%;
+}
+
+.sign-log-button-container{
+    display:flex;
+    justify-content: center;
+    column-gap: 30px;
+    margin-top:30px;
+}
+
+.sign-up-button,.log-in-button{
+    padding:15px 25px;
+    border:none;
+    font-family:'Poppins',sans-serif;
+    cursor:pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; 
+}
+
+.sign-up-button:hover,.log-in-button:hover{
+    background-color: orange;
+}
+
+/* The Modal (background) */
+.modal{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 2000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  /* Modal Content/Box */
+  .modal-content {
+    border:none;
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    width: 60%; /* Could be more or less, depending on screen size */
+  }
+
+  .lantern-image-container{
+    width:60%;
+  }
+  .signin-lantern{
+    width:100%;
+    height:100%;
+  }
+
+  .inner-modal{
+    display: flex;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    margin-right:10px;;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .sign-in-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    width:50%;
+    font-family:'Poppins',sans-serif;
+    background-color: white;
+  }
+  
+  .sign-in-title{
+    font-size:40px;
+    font-family: Indie Flower;
+    margin-bottom:15px;
+    border-bottom:solid 2px
+  }
+
+.google-sign-in-btn{
+  margin-top:20px;
+   transition: background-color .3s, box-shadow .3s;
+   padding: 12px 16px 12px 42px;
+   border: none;
+   border-radius: 15px;
+   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+   color: #757575;
+   font-size: 14px;
+   font-weight: medium;
+   font-family: 'Poppins',sans-serif;
+   background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTcuNiA5LjJsLS4xLTEuOEg5djMuNGg0LjhDMTMuNiAxMiAxMyAxMyAxMiAxMy42djIuMmgzYTguOCA4LjggMCAwIDAgMi42LTYuNnoiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGQ9Ik05IDE4YzIuNCAwIDQuNS0uOCA2LTIuMmwtMy0yLjJhNS40IDUuNCAwIDAgMS04LTIuOUgxVjEzYTkgOSAwIDAgMCA4IDV6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNNCAxMC43YTUuNCA1LjQgMCAwIDEgMC0zLjRWNUgxYTkgOSAwIDAgMCAwIDhsMy0yLjN6IiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNOSAzLjZjMS4zIDAgMi41LjQgMy40IDEuM0wxNSAyLjNBOSA5IDAgMCAwIDEgNWwzIDIuNGE1LjQgNS40IDAgMCAxIDUtMy43eiIgZmlsbD0iI0VBNDMzNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTAgMGgxOHYxOEgweiIvPjwvZz48L3N2Zz4=);
+   background-color: white;
+   background-repeat: no-repeat;
+   background-position: 12px 11px;
+  }
+
+.google-sign-in-btn:hover{
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 2px 4px rgba(0, 0, 0, .25);
+    cursor:pointer;
+}
+  
+  #sign-in-form{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #sign-in-form input:focus{
+    outline:none;
+  }
+
+  #sign-in-form input::placeholder{
+    font-family:'Poppins', sans-serif;
+    text-align: center;
+  }
+
+  #submit-signinform{
+    display:block;
+  }
+
+  #submit-loginform{
+    display:none;
+  }
+
+  .alternate-method{
+    display:flex;
+    margin-top:50px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text-login-or-signin{
+    font-size:12px;
+  }
+  
+  .login-or-signin-button-ask2,.login-or-signin-button-ask{
+    border:none;
+    margin-left:10px;
+    background-color: white;
+    font-size:12px;
+    color:blue;
+    font-family:'Poppins',sans-serif;
+  }
+
+  #email-signin,#password-signin{
+    margin-bottom:10px;
+    width:100%;
+    border-radius:10px;
+    background-color: rgb(237, 237, 237);
+    padding:10px 20px;
+    border:none;
+    font-size:15px;
+  }
+
+  #submit-signinform,#submit-loginform{
+    background-color: rgb(255, 192, 75);
+    padding:8px 20px;
+    border:none;
+    border-radius:10px;
+    font-family: 'Poppins',sans-serif;
+  }
+
+  #submit-signinform:hover,#submit-loginform:hover{
+    cursor:pointer;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  }
+
+
+

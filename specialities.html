@@ -40,7 +40,8 @@
                 <li><a href="menu.html" >Menu</a></li>
                 <li><a href="specialities.html" style="color:orange;">Specialities</a></li>
                 <li><a href="reservation.html">Reservation</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><button class="sign-header-button"></button></li>
             </ul>
         </nav>
     </header>
@@ -196,5 +197,61 @@
     </footer>
     <div class="copyright-footer">Copyright ©2024 All rights reserved</div>
     <script src="scripts/specialities.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js"></script>
+    <script type="module">
+        import { initializeApp} from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+       import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
+       import { signInWithEmailAndPassword,signOut,createUserWithEmailAndPassword,onAuthStateChanged, getAuth, GoogleAuthProvider,signInWithPopup } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyCZKKEwPhav9um9nMUFbrNQLZcFFFrVNp4",
+    authDomain: "restaurant-48fe6.firebaseapp.com",
+    projectId: "restaurant-48fe6",
+    storageBucket: "restaurant-48fe6.appspot.com",
+    messagingSenderId: "191750874067",
+    appId: "1:191750874067:web:3645494c9119a2fe63c526"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const DB = getDatabase(app);
+  let auth = getAuth();
+  auth.languageCode = 'en'
+
+  let a=0;
+
+  const signinheader = document.querySelector('.sign-header-button');
+  onAuthStateChanged(auth, (user) => {
+  if(user) {
+    signinheader.textContent='Log out';
+    a=0;
+}
+
+   else {
+    console.log("user is not logged in");
+    signinheader.textContent='Sign In';
+    a=1;
+  }
+});
+function changingwindow(){window.location.href = "reservation.html";}
+signinheader.onclick = async (e)=>{
+  await changingwindow();
+  if(a==1){
+   //sign in 
+   e.preventDefault();
+  document.querySelector('.modal').style.display='block';
+  }
+  else{
+    //sign out
+    e.preventDefault();
+    try {
+    await signOut(auth);
+    alert('You have logged Out successfully!!');
+  } catch (error) {
+  }}
+  }
+  
+
+    </script>
 </body>
 </html>
