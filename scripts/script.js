@@ -105,19 +105,18 @@ function isInViewport(element) {
   return (
     rect.top >= 0 &&
     rect.left >= 0 &&
-    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && rect.right <= (window.innerWidth || document.documentElement.clientWidth)
   );
 }
 
 function checkScroll() {
-  var menu = document.querySelector('.menu');
-  var animatedElements = document.querySelectorAll('.animated-element');
+  const menu = document.querySelector('.menu');
+  const animatedElements = document.querySelectorAll('.animated-element');
 
-  if (window.scrollY > 20) {
+  if (window.scrollY > 5) {
     menu.style.top = "0";
   } else {
-    menu.style.top = "-60px"; // Adjust based on your menu height
+    menu.style.top = "-60px"; 
   }
 
   animatedElements.forEach(function (element) {
@@ -131,27 +130,23 @@ window.addEventListener('scroll', checkScroll);
 window.addEventListener('resize', checkScroll);
 window.addEventListener('DOMContentLoaded', checkScroll);
 
+
+//Review Slider
 const slides = document.querySelectorAll('.slides');
 const prevBtn = document.getElementById('prev-btn');
 const nextBtn = document.getElementById('next-btn');
 const dots = document.querySelectorAll('.dot')
 
-
 let index = 0;
-
-// Adding opacity to first dot on first time
-
 dots[0].style.opacity='1'
 
 // positioning the slides
-
 slides.forEach((slide,index)=>{
   slide.style.left=`${index*100}%`
 });
 
 
 // move slide function
-
 const moveSlide = () =>{
   slides.forEach((slide)=>{
     slide.style.transform=`translateX(-${index*100}%)`;
@@ -159,7 +154,6 @@ const moveSlide = () =>{
 }
 
 // remove dots opacity 1 from all dots
-
 const removeDotsOpacity = () =>{
   dots.forEach((dot)=>{
     dot.style.opacity='.2';
@@ -176,7 +170,6 @@ dots.forEach((dot,i)=>{
 });
 
 // show the previous slide
-
 prevBtn.addEventListener('click',()=>{
   if(index===0) return index;
   index--;
@@ -186,7 +179,6 @@ prevBtn.addEventListener('click',()=>{
 });
 
 // show the next slide
-
 nextBtn.addEventListener('click',()=>{
   if(index===slides.length-1) return index;
   index++;
@@ -196,7 +188,6 @@ nextBtn.addEventListener('click',()=>{
 });
 
 // auto play slide
-
 const autoPlaySlide = () =>{
   removeDotsOpacity();
   if(index===slides.length-1) index= -1;
@@ -206,6 +197,6 @@ const autoPlaySlide = () =>{
 }
 
 window.onload=()=>{
-  setInterval(autoPlaySlide,10000);
+  setInterval(autoPlaySlide,7000);
 }
 

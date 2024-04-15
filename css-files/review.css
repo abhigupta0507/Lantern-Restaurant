@@ -10,11 +10,12 @@
 
 .customer-review-container-top{
     color:grey;
-    font-size:15px;
+    font-size:12px;
 }
 
 .customer-review-container-line{
     font-size:40px;
+    font-family: 'Indie Flower',sans-serif;
 }
 
 .review-block{
@@ -143,18 +144,6 @@
     border-radius: 50%;
     transition: opacity .2s ease-in-out;
     cursor: pointer;
-  }
-  
-  @media screen and (max-width:950px) {
-    .slider-wrapper{
-      width: 70%;
-    }
-  }
-  
-  @media screen and (max-width:680px) {
-    .slider-wrapper{
-      width: 90%;
-    }
   }
 
 .rating-photo{

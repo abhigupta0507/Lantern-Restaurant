@@ -85,7 +85,8 @@ body{
 }
 
 .our-menu-title{
-    font-size:35px;
+    font-size:40px;
+    font-family:'Indie Flower',sans-serif;
 }
 
 .menu-section-container{
@@ -97,12 +98,13 @@ body{
 }
 
 .pagination{
-    margin-top:80px;
+    margin-top:50px;
     width: 35%;
     display:flex;
     justify-content: space-around;
-    text-align: center;
     padding-left:7%;
+    position:relative;
+    right:3%;
 }
 
 .pagination button{
