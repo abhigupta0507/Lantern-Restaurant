@@ -110,7 +110,13 @@ body{
     border:none;
     border-radius:5px;
     background-clip: padding-box;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    transition:transform 0.4s box-shadow 0.4s;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.pagination button:hover{
+    transform: scale(1.1);
+    cursor:pointer;
 }
 
 .pagination button a{
