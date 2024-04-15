@@ -12,3 +12,6 @@ Project includes:-
 
 Link to the video is\n
 https://youtu.be/iixGgNZBcoU
+
+Link to Website is
+https://lantern-restaurant.netlify.app/
