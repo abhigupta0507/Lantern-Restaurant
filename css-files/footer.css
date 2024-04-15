@@ -1,35 +1,28 @@
-
-.instagram-photo,.facebook-photo,.twitter-photo
-{
+.instagram-photo,.facebook-photo,.twitter-photo{
     width:20px;
 }
 
-.social-media-profiles
-{
+.social-media-profiles{
     display:flex;
     height:35px;
     width:150px;
     justify-content:space-between;
 }
 
-.social-media-button
-{
+.social-media-button{
     border-radius:50%;
     width:40px;
     height:40px;
     background-color:rgb(45, 45, 45);
     border:none;
-    
 }
 
-.social-media-photo
-{
+.social-media-photo{
     width:20px;
     margin-top:5px;
 }
 
-.social-media-button:hover
-{
+.social-media-button:hover{
     background-color: rgb(163, 163, 163);
 }
 
@@ -51,7 +44,6 @@ footer{
     column-gap:20px;
     font-family: 'Poppins', sans-serif;
 }
-
 
 .column-footer{
     width:18%;

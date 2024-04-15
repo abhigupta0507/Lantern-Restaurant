@@ -27,12 +27,14 @@ body {
     background-color: transparent;
     color:white;
     border:solid;
-    transition:background-color 0.3 color 0.3s ease-in-out
+    transition:background-color 0.3 color 0.3s ease-in-out transform 0.3s 
 }
 
 .name-header-button:hover{
     color:black;
     background-color: white;
+    transform: scale(1.1);
+    cursor:pointer;
 }
 
 .text-above-background-top{
@@ -70,13 +72,13 @@ body {
 
 .main-header nav ul li a {
     text-decoration: none;
-    color: white; /* Default text color */
+    color: white;
     padding: 10px 20px;
     transition: color 0.3s ease;
 }
 
 .main-header.inverted nav ul li a {
-    color: #ffffff; /* Inverted text color */
+    color: #ffffff;
 }
 
 .name-header-button.inverted{
@@ -128,6 +130,16 @@ body {
     padding:10px;
     font-size:15px;
     margin-right:20px;
+    cursor:pointer;
+}
+
+.sign-header-button:hover{
+    color:black;
+    background-color: white;
+}
+
+.sign-header-button:active{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 

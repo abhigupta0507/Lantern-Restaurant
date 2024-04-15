@@ -1,10 +1,8 @@
-
-  .slider {
-    /* overflow: hidden; */
+.slider {
     width: 100vw;
     height: 500px;
     position: relative;
-  }
+}
   
   .slider .slide {
     position: absolute;

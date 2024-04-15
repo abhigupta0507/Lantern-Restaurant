@@ -1,11 +1,10 @@
-
 .slider {
     width: 100vw;
     height: 500px;
     position: relative;
-  }
+}
   
-  .slider .slide {
+.slider .slide {
     position: absolute;
     top: 0;
     left: 0;
@@ -13,9 +12,9 @@
     height: 100%;
     background-size: cover;
     background-position: center;
-  } 
-  
-  .slider .slide:nth-child(1) {
-    background-image: url('slider-images/menu-background.jpg');
-  }
+} 
+
+.slider .slide:nth-child(1) {
+    background-image: url('slider-images/aboutusbg.jpg');
+}
 

@@ -1,0 +1,76 @@
+.aboutusheader{
+    left:40%;
+    top:50%;
+}
+
+
+.name-header-button{
+    border-color: orange;
+}
+
+.aboutusprimary{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap:20px;
+    width:80%;
+    padding-left:10%;
+    padding-right: 10%;;
+}
+
+.about-rest-title-name{
+    font-size:40px;
+    font-family: 'Poppins',sans-serif;
+}
+
+.about-rest-desc-name{
+
+}
+
+.about-mainimg-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:80%;
+    padding-left:10%;
+    padding-right:10%;
+    margin-top:80px;
+    row-gap:50px;
+}
+
+.about-image-details{
+    display: flex;
+    flex-direction: column;
+    row-gap:25px;
+}
+
+.about-image-title{
+    text-align: center;
+    font-family: 'Indie Flower',sans-serif;
+    font-size:35px;
+}
+
+.about-image{
+    width:100%;
+}
+
+.about-image-container{
+    width:100%;
+}
+
+.about-mainimg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 30px;
+}
+
+.about-image-description{
+    text-align: center;
+
+}
+
+
+
