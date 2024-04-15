@@ -1,0 +1,1 @@
+document.querySelector('.login-or-signin-button-ask').style.display='none';

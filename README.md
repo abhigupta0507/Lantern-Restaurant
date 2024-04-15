@@ -1,7 +1,6 @@
 # Lantern-Restaurant
 
-Created by Abhishek Gupta.
-23075003.
+Created by Abhishek Gupta. 23075003.
 DebugIt'24
 
 Project includes:-
@@ -11,4 +10,5 @@ Project includes:-
 4.Firebase(RealTime Database) for Booking Table and messaging restaurant
 5.Firebase Authentication
 
-
+Link to the video is\n
+https://youtu.be/iixGgNZBcoU
